@@ -1,70 +1,103 @@
-# Getting Started with Create React App
+# Smart Nearby Places Recommender 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A modern, location-based web application that recommends nearby places based on user mood and distance.  
+Built using open-source map data with a strong focus on UX, performance, and clean architecture.
 
-## Available Scripts
+🔗 **Live Demo:** https://smartnearbyplaces.vercel.app/
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- 📍 **Live User Location Detection** using browser geolocation
+- **Mood-based Place Recommendations**
+  - ☕ Cafe
+  - ❤️ Restaurant
+  - 🍔 Quick Bite
+  - 💸 Budget
+- **Interactive Map View** using Leaflet & OpenStreetMap
+- **Color-Coded Map Markers** for each mood
+- **Distance Filter** (1–50 km)
+- **Smart API Caching** to reduce repeated requests
+- **Loading Indicators & Smooth Animations**
+- **Modern UI** with gradient background & glassmorphism design
+- **No Paid APIs** – fully open-source and ethical
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `npm test`
+## Tech Stack
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+| Layer | Technology |
+|------|-----------|
+Frontend | React (JavaScript)
+Maps | Leaflet + OpenStreetMap
+Places Data | Overpass API
+Styling | CSS + Inline Styles
+State Management | React Hooks
+Deployment | Vercel
 
-### `npm run build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## How the App Works
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1. The app requests the user’s location via browser geolocation
+2. User selects a **mood**
+3. The app queries the **Overpass API** using mapped OpenStreetMap amenity tags
+4. Results are:
+   - distance-calculated
+   - sorted by proximity
+   - cached for performance
+5. Places are displayed on:
+   - an interactive map
+   - a scrollable list view
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
 
-### `npm run eject`
+## How to Run This Project Locally
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+1️⃣ Clone the Repository
+```bash
+git clone https://github.com/akalyatamilvel/smart-nearby-places.git
+```
+2️⃣ Navigate into the Project Directory
+```bash
+cd smart-nearby-places
+```
+3️⃣ Install Dependencies
+```bash
+npm install
+```
+4️⃣ Start the Development Server
+```bash
+npm start
+```
+🌐 Open in Browser
+http://localhost:3000
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+📍 Note: Please allow location access in your browser for full functionality.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+---
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Design Decisions
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Avoided proprietary APIs (e.g., Google Maps)
 
-### Code Splitting
+Used open data sources only
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Kept the app lightweight and demo-safe
 
-### Analyzing the Bundle Size
+Prioritized clarity, usability, and maintainability
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Deployment
 
-### Making a Progressive Web App
+The app is deployed using Vercel and runs over HTTPS, enabling geolocation support.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## Author
 
-### Advanced Configuration
+Akalya Tamilvel Senbakam
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Student | Frontend Developer
 
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Built with ❤️ using React and open-source mapping tools.
